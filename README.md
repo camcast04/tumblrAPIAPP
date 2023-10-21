@@ -1,10 +1,10 @@
-# Project 5 - *Name of App Here*
+# Project 5 - *Tumblr APP APIe*
 
 Submitted by: **Your Name Here**
 
 **Name of your app** is an app that ... [TODO] 
 
-Time spent: **X** hours spent in total
+Time spent: **5** hours spent in total
 
 ## Required Features
 
