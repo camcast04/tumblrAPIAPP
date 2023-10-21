@@ -1,4 +1,4 @@
-# Project 5 - *Tumblr APP APIe*
+# Project 5 - *Tumblr Feed APP*
 
 Submitted by: **Your Name Here**
 
