@@ -26,7 +26,11 @@ Added Humans of NYC feed as suggested
 
 ## Video Walkthrough
 
-<img src='https://i.imgur.com/UdVKYqS.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />.
+<img src='https://i.imgur.com/UdVKYqS.gif' title='Video Walkthrough' width='' alt='Video Walkthrough'/>
+
+
+
+https://i.imgur.com/UdVKYqS.gif
 
 ## Notes
 
