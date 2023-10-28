@@ -40,11 +40,6 @@ Added Humans of NYC feed as suggested
 <img src='https://i.imgur.com/1Wk7ieB.gif' title='Video Walkthrough' width='' alt='Video Walkthrough'/>
 
 
-
-<img src='https://i.imgur.com/UdVKYqS.gif' title='Video Walkthrough' width='' alt='Video Walkthrough'/>
-
-
-
 ## Notes
 
 Describe any challenges encountered while building the app.
