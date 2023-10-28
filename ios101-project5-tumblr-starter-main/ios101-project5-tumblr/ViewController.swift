@@ -4,24 +4,25 @@
 import UIKit
 import Nuke
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - Properties
     var tableView: UITableView!
     var posts: [Post] = []
     
-    // For stretch feature: Ability to fetch posts from different blogs
     let blogURLString = "https://api.tumblr.com/v2/blog/humansofnewyork/posts/photo?api_key=1zT8CiXGXFcQDyMFG7RtcfGLwTdDjFUJnZzKJaWTmgyK4lKGYk"
 
-    // For stretch feature: Pull to refresh
     let refreshControl = UIRefreshControl()
 
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "Tumblr Feed"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         setupTableView()
-        setupRefreshControl() // Setting up pull-to-refresh
+        setupRefreshControl()
         fetchPosts()
     }
 
@@ -29,16 +30,14 @@ class ViewController: UIViewController, UITableViewDataSource {
     func setupTableView() {
         tableView = UITableView(frame: view.bounds, style: .plain)
         tableView.dataSource = self
+        tableView.delegate = self  // Set the delegate
         
-        // Register your custom cell
         tableView.register(PostTableViewCell.self, forCellReuseIdentifier: "PostCell")
         
         view.addSubview(tableView)
         
-        // If you're using AutoLayout, set this to false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
-        // Constraints to pin the tableView to the entire view
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -46,8 +45,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
-    
-    // For stretch feature: Setting up pull-to-refresh
+
     func setupRefreshControl() {
         refreshControl.addTarget(self, action: #selector(fetchPosts), for: .valueChanged)
         tableView.refreshControl = refreshControl
@@ -64,10 +62,31 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.configure(with: post)
         return cell
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: selectedIndexPath, animated: true)
+        }
+    }
+
+    
+    // MARK: - UITableViewDelegate Methods
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let post = posts[indexPath.row]
+        let detailVC = DetailViewController()
+        detailVC.post = post
+        
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
 
     // MARK: - API Call
-    @objc func fetchPosts() { // Added @objc for the selector
-        let url = URL(string: blogURLString)! // Use variable for easier switching
+    @objc func fetchPosts() {
+        let url = URL(string: blogURLString)!
         let session = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             if let error = error {
                 print("❌ Error: \(error.localizedDescription)")
@@ -85,14 +104,13 @@ class ViewController: UIViewController, UITableViewDataSource {
             }
 
             do {
-                // Decode the JSON data into our data models
-                let blog = try JSONDecoder().decode(Blog.self, from: data) // Using Blog struct from Post.swift
+                let blog = try JSONDecoder().decode(Blog.self, from: data)
                 let posts = blog.response.posts
 
                 DispatchQueue.main.async {
                     self?.posts = posts
                     self?.tableView.reloadData()
-                    self?.refreshControl.endRefreshing() // End refreshing when data is loaded
+                    self?.refreshControl.endRefreshing()
                 }
 
             } catch {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8631028F2AE3559300957ACE /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8631028E2AE3559300957ACE /* PostTableViewCell.swift */; };
+		86DF76632AECC57D002C2DC4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF76622AECC57D002C2DC4 /* DetailViewController.swift */; };
 		ED59161029BC307D000F25AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED59160F29BC307D000F25AE /* AppDelegate.swift */; };
 		ED59161229BC307D000F25AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED59161129BC307D000F25AE /* SceneDelegate.swift */; };
 		ED59161429BC307D000F25AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED59161329BC307D000F25AE /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		8631028E2AE3559300957ACE /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		86DF76622AECC57D002C2DC4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		ED59160C29BC307D000F25AE /* ios101-project5-tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios101-project5-tumblr.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED59160F29BC307D000F25AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED59161129BC307D000F25AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				ED59161A29BC307E000F25AE /* LaunchScreen.storyboard */,
 				ED59161D29BC307E000F25AE /* Info.plist */,
 				8631028E2AE3559300957ACE /* PostTableViewCell.swift */,
+				86DF76622AECC57D002C2DC4 /* DetailViewController.swift */,
 			);
 			path = "ios101-project5-tumblr";
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				ED59161429BC307D000F25AE /* ViewController.swift in Sources */,
 				ED59161029BC307D000F25AE /* AppDelegate.swift in Sources */,
 				8631028F2AE3559300957ACE /* PostTableViewCell.swift in Sources */,
+				86DF76632AECC57D002C2DC4 /* DetailViewController.swift in Sources */,
 				ED59161229BC307D000F25AE /* SceneDelegate.swift in Sources */,
 				ED59162429BC4921000F25AE /* Post.swift in Sources */,
 			);
