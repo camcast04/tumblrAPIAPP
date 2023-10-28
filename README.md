@@ -1,12 +1,23 @@
-# Project 5 - *Tumblr Feed APP*
+# Project 6 - *Tumblr Feed APP*
 
-Submitted by: **Your Name Here**
+Submitted by: **Camila Castaneda**
 
-**Name of your app** is an app that ... [TODO] 
+**Humans Of NYC Tumblr Feed** is an app that allows you to see the latest Humans of NYC posts 
 
-Time spent: **5** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Required Features
+
+The following **required** functionality is completed:
+
+- [X] Setup navigation to the Detail Screen
+- [X] Created the Detail View UI
+- [X] Add the ability to pass data to the Detail View Controller
+- [X] Made personal finishing touches to the UI
+
+
+The following **additional** features are implemented:
+- [ ] List anything else that you can get done to improve the app functionality!
 
 The following **required** functionality is completed:
 
@@ -26,11 +37,13 @@ Added Humans of NYC feed as suggested
 
 ## Video Walkthrough
 
+<img src='https://i.imgur.com/1Wk7ieB.gif' title='Video Walkthrough' width='' alt='Video Walkthrough'/>
+
+
+
 <img src='https://i.imgur.com/UdVKYqS.gif' title='Video Walkthrough' width='' alt='Video Walkthrough'/>
 
 
-
-https://i.imgur.com/UdVKYqS.gif
 
 ## Notes
 
@@ -38,7 +51,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2023] [Camila Castaneda]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
